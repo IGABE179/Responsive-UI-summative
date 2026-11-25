@@ -1,0 +1,238 @@
+* {
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #FAF6F0;
+    color:#382B25;
+    line-height: 1.6;
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #FFFFFF;
+}
+.logo{
+    color: #854B35;
+    font-size: 26px;
+}
+.nav-links{
+    display: flex;
+    gap: 25px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #382B25;
+    font-weight: bold;
+}
+.nav-links a:hover{
+    color:#B65F42;
+}
+.hero{
+    min-height: 350px;
+    background: linear-gradient(
+        rgba(48,34,27,0.75),
+        rgba(48,34,27,0.75)
+    ),
+    url("https://images.unsplash.com/photo-1507842217343-583bb7270b66")
+center/cover;
+display: flex;
+align-items: center;
+padding: 50px 8%;
+color: white;
+}
+.hero-content{
+    max-width: 600px;
+}
+.subtitle{
+    color: #F0B48C;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.hero h2{
+    font-size: 42px;
+    margin: 15px 0;
+    line-height: 1.2;
+}
+.hero p{
+    margin-bottom: 25px;
+}
+.hero-button {
+    display: inline-block;
+    background-color: #FFFFFF;
+    color: #2457A6;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #2457A6;
+    color: #FFFFFF;
+    border-color: #2457A6;
+    transform: translateY(-3px);
+}
+
+.search-section{
+    text-align: center;
+    padding: 50px 8%;
+}
+
+.search-section h2,
+.results-section h2,
+.about-section h2{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.search-section > p {
+    color: #76675E;
+    margin-bottom: 25px;
+}
+
+#search-form{
+    display: flex;
+    max-width: 650px;
+    margin: auto;
+    gap: 10px;
+}
+#search-input{
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #D5C5B8;
+    border-radius: 5px;
+    font-size: 16px;
+    min-width: 0;
+}
+#search-form button{
+    padding: 14px 25px;
+    background-color: #854B35;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#search-form button:hover{
+    background-color: #663824;
+}
+.filters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+.filters select{
+    padding: 10px;
+    border: 1px solid #D5C5B8;
+    border-radius: 5px;
+    background-color: white;
+}
+#message{
+   text-align: center;
+   margin: 15px;
+   color: #854B35;
+   font-weight: bold; 
+}
+.results-section{
+    padding: 30px 8% 60px;
+}
+.results-section h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.books-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 25px;
+}
+.book-card{
+    background-color: white;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+.book-card img{
+width: 100%;
+height:220px;
+object-fit: contain;
+margin-bottom: 15px;
+background-color: #F4EFE8;
+}
+.book-card h3{
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.book-card p{
+    color: #76675E;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+.book-card a {
+    display: inline-block;
+    margin-top: auto;
+    padding-top: 12px;
+    color: #A34F34;
+    text-decoration: none;
+    font-weight: bold;
+}
+.book-card a:hover {
+    text-decoration: underline;
+}
+.about-section {
+    padding: 50px 10%;
+    text-align: center;
+    background-color: #EFE4D8;
+}
+.about-section p {
+    max-width: 750px;
+    margin: auto;
+    color: #66564D;
+}
+footer{
+  background-color: #382B25;
+  color: white;
+  text-align: center;
+  padding: 25px;  
+}
+footer a{
+   color: #F0B48C; 
+}
+@media(max-width: 600px){
+    .navbar{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-links{
+        gap:15px;
+    }
+    .hero h2{
+        font-size: 30px;
+    }
+    #search-form{
+       flex-direction: column; 
+    }
+    #search-form button{
+        width: 100%;
+    }
+    .filters select{
+        width: 100%;
+    }
+    .books-container{
+        grid-template-columns: 1fr;
+    }
+
+}

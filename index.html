@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduFind - Educational Resource Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <!--Navigattion--> 
+   <header>
+    <nav class="navbar">
+        <h1 class="logo">📚 EduFind</h1>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+             <a href="#resources">Resources</a>
+              <a href="#about">About</a>
+        </div>
+    </nav>
+   </header>
+
+   <!--Hero Section-->
+   <section class="hero" id="home">
+
+    <div class="hero-content">
+        <p class="subtitle"> LEARN. DISCOVER. GROW.</p>
+
+        <h2>Discover Resources That Help You Learn</h2>
+        <p>
+            Find educational books and learning materials 
+            to support your academic journey.
+        </p>
+    </div>
+   </section>
+<!--Search Section-->
+<main id="resources">
+    <section class="search-section">
+        <h2>Find Your Next Learning Resource</h2>
+        <p>Search for books by title, author or subject.</p>
+        <form id="search-form">
+            <input 
+            type="text"
+            id="search-input"
+            placeholder="Search for Mathematics, Programming, ..."
+            required
+            >
+            <button type="submit">Search</button>
+        </form>
+
+        <!--Subject Filters-->
+        <div class="filters">
+            <label for="subject-filter">Subject:</label>
+            <select id="subject-filter">
+                <option value="all">All Subjects</option>
+                  <option value="mathematics">Mathematics</option>
+                    <option value="science">Science</option>
+                      <option value="computer science">Computer Science</option>
+                        <option value="history">History</option>
+                          <option value="business">Business</option>
+            </select>
+            <label for="sort-filter"> Sort by:</label>
+            <select id="sort-filter">
+                <option value="relevance">Relevance</option>
+                <option value="title">Title (A-Z)</option>
+                <option value="newest">Newest publication</option>
+                <option value="oldest">Oldest publication</option>
+            </select>
+    
+        </div>
+    </section>
+<!--Loading and Error Messages-->
+<p id="message"></p>
+
+<!--Book Results-->
+<section class="results-section">
+    <h2>Educational Resources</h2>
+    <div id="books-container" class="books-container">
+        <!--JavaScript will display books here-->
+    </div>
+</section>
+</main>
+
+<!--About Section-->
+<section class="about-section" id="about">
+    <h2>About EduFind</h2>
+    <p>
+        EduFind is an educational resource discovery platform 
+        designed to help students find books and learning 
+        materials easily. It uses the Open Library API to
+        provide access to information about books from 
+        different subjects.
+    </p>
+</section>
+
+<!--Footer-->
+<footer>
+    <p>
+        &copy; 2026 EduFind. Built for learners.
+    </p>
+    <p>
+        Book information provided by 
+        <a href="https://openlibrary.org/" target="_blank"
+        rel="noopener noreferrer"> Open Library</a>.
+    </p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

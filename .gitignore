@@ -1,0 +1,17 @@
+# Environment variables and secrets
+.env
+.env.*
+
+#Dependencies
+node_modules/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+#Vs Code settings
+.vscode/
+
+#Log files
+*.log
