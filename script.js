@@ -20,7 +20,7 @@ async function fetchBooks(searchTerm = "education"){
             limit: "25"
         });
 
-        const apiURL = `https://openlibrary.org/search.json?${params}`;
+        const apiURL = `/api/books?${params}`;
         const response = await fetch (apiURL);
 
         if (!response.ok){
